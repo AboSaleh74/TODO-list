@@ -1,3 +1,35 @@
+# 📋 TODO List App
+
+A simple and clean To-Do List web application built with **Flask**, **HTML**, and **CSS**.
+
+---
+
+## 🚀 Features
+
+- ✅ Add new tasks  
+- 🗑️ Delete tasks  
+- 🎨 Simple & responsive design  
+- 🧠 Built using Python Flask backend
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend:** Python, Flask  
+- **Frontend:** HTML, CSS
+
+---
+
+## 📦 How to Run the Project
+
+### ✅ Requirements:
+
+- Python 3.x
+- pip
+
+### 🧪 Installation Steps:
+
+```bash
 # 1. Clone the repo
 git clone https://github.com/AboSaleh74/TODO-list.git
 cd TODO-list
@@ -14,15 +46,3 @@ python app.py
 
 # 5. Open in browser
 http://localhost:5000
-
----------------------------------------------------------------------------------------
-
-TODO-list/
-│
-├── static/
-│   └── style.css
-├── templates/
-│   └── index.html
-├── app.py
-├── requirements.txt
-└── README.md
