@@ -46,3 +46,17 @@ python app.py
 
 # 5. Open in browser
 http://localhost:5000
+```
+### 📁 Project Structure
+
+```bash
+TODO-list/
+│
+├── static/
+│   └── style.css
+├── templates/
+│   └── index.html
+├── app.py
+├── requirements.txt
+└── README.md
+```
