@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>My Todo List</h1>
+
+    <ul> 
+        {% for todo in todos %} 
+            <li> 
+                <form action="/check/{{ todo.id }}" method="POST" style="display:inline;"> 
+                    <input type="checkbox" name="done" {% if todo.done %}checked{% endif %} onchange="this.form.submit()"> 
+                    <span {% if todo.done %} style="text-decoration: line-through; color: gray;" {% endif %}>{{ todo.name }}</span> 
+                </form> 
+                <a href="/edit/{{ todo.id }}">✏️ Edit</a> 
+                <a href="/delete/{{ todo.id }}">🗑️ Delete</a> 
+            </li> 
+        {% endfor %} 
+    </ul> 
+
+    <form method="POST" action="/add"> 
+        <input type="text" name="name" placeholder="New Task..." required> 
+        <button type="submit">➕ Add</button> 
+    </form> 
+
+    <form method="POST" action="/clear"> 
+        <button type="submit">✅ Clear Completed</button> 
+    </form> 
+
+    <form method="POST" action="/clear_all"> 
+        <button type="submit">🚫 Clear All</button> 
+    </form>
+</body>
+</html>
